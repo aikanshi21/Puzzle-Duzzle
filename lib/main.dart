@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import './main2.dart';
+import 'dart:io';
 
-void main() => runApp(MyApp());
+void main() => runApp(MaterialApp(
+      home: MyApp(),
+    ));
 
 class MyApp extends StatelessWidget {
   @override
@@ -21,40 +25,52 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Puzzle Duzzle'),
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             const Text(
               'Puzzle Duzzle!',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 40,
+                fontSize: 60,
               ),
             ),
-            // ignore: deprecated_member_use
-            RaisedButton(
-              onPressed: () {},
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Levels()),
+                );
+              },
               child: const Text('Play!'),
             ),
-
-            RaisedButton(
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
               onPressed: () {},
               child: const Text('Help'),
             ),
-            RaisedButton(
+            const SizedBox(height: 20),
+            ElevatedButton(
               onPressed: () {},
               child: const Text('About'),
             ),
-            RaisedButton(
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
               onPressed: () {},
               child: const Text('Settings'),
             ),
-            RaisedButton(
-              onPressed: () {},
-              child: const Text('Exit'),
+            const SizedBox(
+              height: 20,
             ),
           ],
         ),
