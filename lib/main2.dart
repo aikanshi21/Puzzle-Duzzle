@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 
-void main() => runApp(MaterialApp(
-      home: Levels(),
-    ));
-
 class Levels extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

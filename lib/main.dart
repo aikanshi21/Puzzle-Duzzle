@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './main2.dart';
+import './help.dart';
 import 'dart:io';
 
 void main() => runApp(MaterialApp(
@@ -35,7 +36,7 @@ class MyHomePage extends StatelessWidget {
               'Puzzle Duzzle!',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 60,
+                fontSize: 40,
               ),
             ),
             const SizedBox(
@@ -54,7 +55,12 @@ class MyHomePage extends StatelessWidget {
               height: 20,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Help()),
+                );
+              },
               child: const Text('Help'),
             ),
             const SizedBox(height: 20),
