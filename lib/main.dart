@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './main2.dart';
+import './levels.dart';
 import './help.dart';
 import 'dart:io';
 
@@ -11,11 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Puzzle Duzzle',
-      theme: ThemeData(
-        primarySwatch: Colors.lightGreen,
-      ),
+      theme: ThemeData(primarySwatch: Colors.indigo),
       home: MyHomePage(),
     );
   }
